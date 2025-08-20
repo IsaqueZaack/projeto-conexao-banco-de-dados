@@ -37,7 +37,8 @@ public class CategoriaDAO {
             ps = connection.prepareStatement(sql);
             rs = ps.executeQuery();
             while(rs.next()) {
-                Categoria categoria = new Categoria(rs.getLong("id_categoria"),
+                Categoria categoria = new Categoria(
+                        rs.getLong("id_categoria"),
                         rs.getString("categoria"));
                 lista.add(categoria);
             }
